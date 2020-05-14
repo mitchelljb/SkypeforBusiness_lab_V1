@@ -305,7 +305,6 @@
       "copy": {
         "name": "vmLoop",
         "count": "[length('1')]"
-        //"count": "[sub(length(variables('VMconfig').VMName),1)]"
       },
       "properties": {
         "mode": "Incremental",
@@ -450,15 +449,10 @@
       "dependsOn": [
         "[resourceId('Microsoft.Resources/deployments','VM-ext-ADDSCS')]",
         "[concat('Microsoft.Resources/deployments/', 'VM-deploy-1')]"
-        //"[concat('Microsoft.Resources/deployments/', 'VM-deploy-2')]",
-        //"[concat('Microsoft.Resources/deployments/', 'VM-deploy-3')]",
-        //"[concat('Microsoft.Resources/deployments/', 'VM-deploy-5')]"
-        //"[concat('Microsoft.Resources/deployments/', 'VM-deploy-6')]"
       ],
       "copy": {
         "name": "DomainJLoop",
         "count": "[length('1')]"
-        //"count": "[length(variables('tojoindomain'))]"
       },
       "properties": {
         "mode": "Incremental",
